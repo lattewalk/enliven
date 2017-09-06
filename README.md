@@ -29,11 +29,6 @@ Chinese
 SpringBoot Framework(Java), Bootstrap(JavaScript), Gradle(for packaging and build), AWS Service APIs
 Html5, CSS, ReactJS/Redux(Javascript)
 
-### Code space
-```
-src/main/java/com/enliven/authservice --  authentication service module
-```
-
 ### Implementation
 1. auth-service: support OAuth2, authorization, login page
 * application.yml defines OAuth2 setting, social media login API token, client authorization-service, and default Sprint Boot service http setting 
@@ -43,10 +38,10 @@ src/main/java/com/enliven/authservice --  authentication service module
 ### Deployment
 ```
 cd auth-service
-gradle build bootRun
+gradle clean build bootRun
 
 cd auth-serivce-client
-gradle build bootRun
+gradle clean build bootRun
 ```
 Browse access http://localhost:9999/client  
 
