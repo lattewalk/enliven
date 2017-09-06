@@ -1,0 +1,81 @@
+# default configure setting for EnableOAuth2Sso
+security:
+# oauth2 for @EnableOAuth2Sso
+#  oauth2:
+#    # Facebook lattewalk@gmail.com
+#    # Login request GET /login redirect to https://www.facebook.com/dialog/oauth?client_id=246083375774471&redirect_uri=http://localhost:8080/login&response_type=code&state=g2cNA4
+#    # redirect again, POST https://www.facebook.com/login.php?skip_api_login=1&api_key=246083375774471&signed_next=1&next=https%3A%2F%2Fwww.facebook.com%2Fv2.6%2Fdialog%2Foauth%3Fredirect_uri%3Dhttp%253A%252F%252Flocalhost%253A8080%252Flogin%26state%3Dg2cNA4%26response_type%3Dcode%26client_id%3D246083375774471%26ret%3Dlogin%26logger_id%3D17d5f6c2-1027-4916-ac11-33c8228f610b&cancel_url=http%3A%2F%2Flocalhost%3A8080%2Flogin%3Ferror%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%26state%3Dg2cNA4%23_%3D_&display=page&locale=en_US&logger_id=17d5f6c2-1027-4916-ac11-33c8228f610b
+#    # login to facebook https://www.facebook.com/login.php?login_attempt=1&next=https%3A%2F%2Fwww.facebook.com%2Fv2.6%2Fdialog%2Foauth%3Fredirect_uri%3Dhttp%253A%252F%252Flocalhost%253A8080%252Flogin%26state%3Dg2cNA4%26response_type%3Dcode%26client_id%3D246083375774471%26ret%3Dlogin%26logger_id%3D17d5f6c2-1027-4916-ac11-33c8228f610b&lwv=100
+#    # facebook login success https://www.facebook.com/v2.6/dialog/oauth?redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Flogin&state=g2cNA4&response_type=code&client_id=246083375774471&ret=login&logger_id=17d5f6c2-1027-4916-ac11-33c8228f610b&ext=1466818516&hash=AeZwPIdJxb2RN4Ot
+#    # set cookie
+#    # redirect back to appserver http://localhost:8080/login?code=AQCOeKFcGzq7X4urc4du8Ol4-AdY28FUQM2k6PzpFK67IUkN0yEqclZXf5_5ow9AbPIu3N8ifQb9OHLAz2F3amzVzVgpyT59lVNRdxbmY5PjK7uSIXb-qyBJkg0VzeLdV3wL8h2w1O9dnGO73J_5fZLZoYGco-rdB0uf4HPfxxXKF6bZmS-P82ct82b4WxpvnjcZ0TmogOc0-no2qMZ2bJV6GpQYKT3TBabiwfQEDBiPf8aYQo8XB7dcoiHXRR1_BaRT9cKQ9vJ1BHUqLp4_Ml3RSflRyQTfhgiRzS4WGqE-9fAAm4CG1-bYN6iR4pgAO-ptr2JZFscfY5Ij5DtQOnzk&state=g2cNA4#_=_
+#    # login set cookie as JSESSIONID=C5550470663393ADA119E76341E6205C; Path=/; HttpOnly
+#    # load html page after login
+#
+#    client:
+#      clientId: 246083375774471
+#      clientSecret: a42ee306d220a07e4ecbb211c6e940de
+#      accessTokenUri: https://graph.facebook.com/oauth/access_token
+#      userAuthorizationUri: https://www.facebook.com/dialog/oauth
+#      tokenName: oauth_token
+#      authenticationScheme: query
+#      clientAuthenticationScheme: form
+#    resource:
+#      userInfoUri: https://graph.facebook.com/me
+
+  # oauth2 for @EnableAuthorizationServer
+  oauth2:
+    client:
+      client-id: acme
+      client-secret: acmesecret
+      scope: read, write
+      auto-approve-scope: '.*'
+
+spring:
+  resources:
+    chain:
+      enabled: true
+
+
+logging:
+  level:
+    org:
+      springframework:
+        security: DEBUG
+
+
+facebook:
+  # Facebook lattewalk@gmail.com
+  # Login request GET /login redirect to https://www.facebook.com/dialog/oauth?client_id=246083375774471&redirect_uri=http://localhost:8080/login&response_type=code&state=g2cNA4
+  # redirect again, POST https://www.facebook.com/login.php?skip_api_login=1&api_key=246083375774471&signed_next=1&next=https%3A%2F%2Fwww.facebook.com%2Fv2.6%2Fdialog%2Foauth%3Fredirect_uri%3Dhttp%253A%252F%252Flocalhost%253A8080%252Flogin%26state%3Dg2cNA4%26response_type%3Dcode%26client_id%3D246083375774471%26ret%3Dlogin%26logger_id%3D17d5f6c2-1027-4916-ac11-33c8228f610b&cancel_url=http%3A%2F%2Flocalhost%3A8080%2Flogin%3Ferror%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%26state%3Dg2cNA4%23_%3D_&display=page&locale=en_US&logger_id=17d5f6c2-1027-4916-ac11-33c8228f610b
+  # login to facebook https://www.facebook.com/login.php?login_attempt=1&next=https%3A%2F%2Fwww.facebook.com%2Fv2.6%2Fdialog%2Foauth%3Fredirect_uri%3Dhttp%253A%252F%252Flocalhost%253A8080%252Flogin%26state%3Dg2cNA4%26response_type%3Dcode%26client_id%3D246083375774471%26ret%3Dlogin%26logger_id%3D17d5f6c2-1027-4916-ac11-33c8228f610b&lwv=100
+  # facebook login success https://www.facebook.com/v2.6/dialog/oauth?redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Flogin&state=g2cNA4&response_type=code&client_id=246083375774471&ret=login&logger_id=17d5f6c2-1027-4916-ac11-33c8228f610b&ext=1466818516&hash=AeZwPIdJxb2RN4Ot
+  # set cookie
+  # redirect back to appserver http://localhost:8080/login?code=AQCOeKFcGzq7X4urc4du8Ol4-AdY28FUQM2k6PzpFK67IUkN0yEqclZXf5_5ow9AbPIu3N8ifQb9OHLAz2F3amzVzVgpyT59lVNRdxbmY5PjK7uSIXb-qyBJkg0VzeLdV3wL8h2w1O9dnGO73J_5fZLZoYGco-rdB0uf4HPfxxXKF6bZmS-P82ct82b4WxpvnjcZ0TmogOc0-no2qMZ2bJV6GpQYKT3TBabiwfQEDBiPf8aYQo8XB7dcoiHXRR1_BaRT9cKQ9vJ1BHUqLp4_Ml3RSflRyQTfhgiRzS4WGqE-9fAAm4CG1-bYN6iR4pgAO-ptr2JZFscfY5Ij5DtQOnzk&state=g2cNA4#_=_
+  # login set cookie as JSESSIONID=C5550470663393ADA119E76341E6205C; Path=/; HttpOnly
+  # load html page after login
+
+  client:
+    clientId: 246083375774471
+    clientSecret: a42ee306d220a07e4ecbb211c6e940de
+    accessTokenUri: https://graph.facebook.com/oauth/access_token
+    userAuthorizationUri: https://www.facebook.com/dialog/oauth
+    tokenName: oauth_token
+    authenticationScheme: query
+    clientAuthenticationScheme: form
+  resource:
+    userInfoUri: https://graph.facebook.com/me
+
+github:
+  client:
+    clientId: bd1c0a783ccdd1c9b9e4
+    clientSecret: 1a9030fbca47a5b2c28e92f19050bb77824b5ad1
+    accessTokenUri: https://github.com/login/oauth/access_token
+    userAuthorizationUri: https://github.com/login/oauth/authorize
+    clientAuthenticationScheme: form
+  resource:
+    userInfoUri: https://api.github.com/user
+
+server:
+  tomcat.access-log-enabled: true
+  tomcat.access-log-pattern: "%h %l %u %t %r %s %b %D"

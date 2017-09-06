@@ -1,0 +1,296 @@
+> gradle build bootRun
+
+Starting a Gradle Daemon (subsequent builds will be faster)
+:compileJava UP-TO-DATE
+:processResources UP-TO-DATE
+:classes UP-TO-DATE
+:findMainClass
+:jar
+:bootRepackage
+:assemble
+:compileTestJava NO-SOURCE
+:processTestResources NO-SOURCE
+:testClasses UP-TO-DATE
+:test NO-SOURCE
+:check UP-TO-DATE
+:build
+:bootRun
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v1.5.6.RELEASE)
+
+2017-08-30 16:22:12.325  INFO 67644 --- [           main] com.enliven.authservice.Application      : Starting Application on jshi-mac with PID 67644 (/Users/jshi/ajsource/aero/codebank/jade/enliven/enliven/auth-service/build/classes/java/main started by jshi in /Users/jshi/ajsource/aero/codebank/jade/enliven/enliven/auth-service)
+2017-08-30 16:22:12.327  INFO 67644 --- [           main] com.enliven.authservice.Application      : No active profile set, falling back to default profiles: default
+2017-08-30 16:22:12.372  INFO 67644 --- [           main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@619713e5: startup date [Wed Aug 30 16:22:12 PDT 2017]; root of context hierarchy
+ , 
+
+
+
+&&&&&&&&&&&&&&&&&&&&&&& OAuth2ClientConfig bean config scope override on ——>@EnableOAuth2Client @Autowired OAuth2ClientContext
+
+2017-08-30 16:22:12.905  INFO 67644 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'scopedTarget.oauth2ClientContext' with a different definition: replacing [Root bean: class [null]; scope=session; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=false; primary=false; 
+factoryBeanName=org.springframework.security.oauth2.config.annotation.web.configuration.OAuth2ClientConfiguration$OAuth2ClientContextConfiguration; factoryMethodName=oauth2ClientContext; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/security/oauth2/config/annotation/web/configuration/OAuth2ClientConfiguration$OAuth2ClientContextConfiguration.class]] with [Root bean: class [null]; scope=session; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=false; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.security.oauth2.client.OAuth2RestOperationsConfiguration$SessionScopedConfiguration$ClientContextConfiguration; factoryMethodName=oauth2ClientContext; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/security/oauth2/client/OAuth2RestOperationsConfiguration$SessionScopedConfiguration$ClientContextConfiguration.class]]
+
+&&&&&&&&&&&&&&&&&&&&&&& oauth2ClientFilterRegistration bean config scope override on 
+
+2017-08-30 16:22:12.907  INFO 67644 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'oauth2ClientFilterRegistration' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=OAuth2ClientConfig; factoryMethodName=oauth2ClientFilterRegistration; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/enliven/authservice/config/OAuth2ClientConfig.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.security.oauth2.client.OAuth2RestOperationsConfiguration$SessionScopedConfiguration; factoryMethodName=oauth2ClientFilterRegistration; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/security/oauth2/client/OAuth2RestOperationsConfiguration$SessionScopedConfiguration.class]]
+2017-08-30 16:22:13.079  WARN 67644 --- [           main] o.s.c.a.ConfigurationClassPostProcessor  : Cannot enhance @Configuration bean definition 'org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerEndpointsConfiguration$TokenKeyEndpointRegistrar' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2017-08-30 16:22:13.305  INFO 67644 --- [           main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-08-30 16:22:13.505  INFO 67644 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'security.oauth2.client-org.springframework.boot.autoconfigure.security.oauth2.OAuth2ClientProperties' of type [org.springframework.boot.autoconfigure.security.oauth2.OAuth2ClientProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-08-30 16:22:13.509  INFO 67644 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.security.oauth2.OAuth2AutoConfiguration' of type [org.springframework.boot.autoconfigure.security.oauth2.OAuth2AutoConfiguration$$EnhancerBySpringCGLIB$$e9c0eb67] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-08-30 16:22:13.526  INFO 67644 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'resourceServerProperties' of type [org.springframework.boot.autoconfigure.security.oauth2.resource.ResourceServerProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-08-30 16:22:13.661  INFO 67644 --- [           main] org.eclipse.jetty.util.log               : Logging initialized @1969ms to org.eclipse.jetty.util.log.Slf4jLog
+2017-08-30 16:22:13.736  INFO 67644 --- [           main] e.j.JettyEmbeddedServletContainerFactory : Server initialized with port: 8080
+2017-08-30 16:22:13.738  INFO 67644 --- [           main] org.eclipse.jetty.server.Server          : jetty-9.4.6.v20170531
+2017-08-30 16:22:13.848  INFO 67644 --- [           main] org.eclipse.jetty.server.session         : DefaultSessionIdManager workerName=node0
+2017-08-30 16:22:13.848  INFO 67644 --- [           main] org.eclipse.jetty.server.session         : No SessionScavenger set, using defaults
+2017-08-30 16:22:13.850  INFO 67644 --- [           main] org.eclipse.jetty.server.session         : Scavenging every 600000ms
+2017-08-30 16:22:13.856  INFO 67644 --- [           main] o.e.j.s.h.ContextHandler.application     : Initializing Spring embedded WebApplicationContext
+2017-08-30 16:22:13.856  INFO 67644 --- [           main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1487 ms
+
+2017-08-30 16:22:14.062  INFO 67644 --- [           main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'metricsFilter' to: [/*]
+2017-08-30 16:22:14.063  INFO 67644 --- [           main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-08-30 16:22:14.063  INFO 67644 --- [           main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-08-30 16:22:14.063  INFO 67644 --- [           main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+
+2017-08-30 16:22:14.063  INFO 67644 --- [           main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'OAuth2ClientContextFilter' to: [/*]
+2017-08-30 16:22:14.063  INFO 67644 --- [           main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-08-30 16:22:14.064  INFO 67644 --- [           main] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2017-08-30 16:22:14.065  INFO 67644 --- [           main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webRequestLoggingFilter' to: [/*]
+2017-08-30 16:22:14.065  INFO 67644 --- [           main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'applicationContextIdFilter' to: [/*]
+2017-08-30 16:22:14.065  INFO 67644 --- [           main] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-08-30 16:22:14.069  INFO 67644 --- [           main] o.e.jetty.server.handler.ContextHandler  : Started o.s.b.c.e.j.JettyEmbeddedWebAppContext@21618fa7{/,[file:///private/var/folders/mm/1_2bn0js45z75bn4rnfnfpthkh589f/T/jetty-docbase.1303398068124497850.8080/, jar:file:/Users/jshi/.gradle/caches/modules-2/files-2.1/org.webjars/bootstrap/3.2.0/aadbf822539bc170014701382cff887094c4c3df/bootstrap-3.2.0.jar!/META-INF/resources, jar:file:/Users/jshi/.gradle/caches/modules-2/files-2.1/org.webjars/jquery/2.1.1/dd89e356066869550b5509c4370f995ad6698d9a/jquery-2.1.1.jar!/META-INF/resources, jar:file:/Users/jshi/.gradle/caches/modules-2/files-2.1/org.webjars/angularjs/1.4.3/583a7ef01ab593be794329b59098c51daa2f9dc3/angularjs-1.4.3.jar!/META-INF/resources],AVAILABLE}
+2017-08-30 16:22:14.069  INFO 67644 --- [           main] org.eclipse.jetty.server.Server          : Started @2378ms
+2017-08-30 16:22:14.344 DEBUG 67644 --- [           main] eGlobalAuthenticationAutowiredConfigurer : Eagerly initializing {org.springframework.boot.autoconfigure.security.SpringBootWebSecurityConfiguration=org.springframework.boot.autoconfigure.security.SpringBootWebSecurityConfiguration$$EnhancerBySpringCGLIB$$7a6bf40f@27b45ea}
+2017-08-30 16:22:14.358  INFO 67644 --- [           main] b.a.s.AuthenticationManagerConfiguration : 
+
+Using default security password: 0f0c199b-d7f2-4085-a9b8-6bc90c2d611e
+
+2017-08-30 16:22:14.433 DEBUG 67644 --- [           main] .s.o.p.e.FrameworkEndpointHandlerMapping : Looking for request mappings in application context: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@619713e5: startup date [Wed Aug 30 16:22:12 PDT 2017]; root of context hierarchy
+2017-08-30 16:22:14.442 DEBUG 67644 --- [           main] .s.o.p.e.FrameworkEndpointHandlerMapping : 2 request handler methods found on class org.springframework.security.oauth2.provider.endpoint.AuthorizationEndpoint: {public org.springframework.web.servlet.ModelAndView org.springframework.security.oauth2.provider.endpoint.AuthorizationEndpoint.authorize(java.util.Map,java.util.Map,org.springframework.web.bind.support.SessionStatus,java.security.Principal)={[/oauth/authorize]}, public org.springframework.web.servlet.View org.springframework.security.oauth2.provider.endpoint.AuthorizationEndpoint.approveOrDeny(java.util.Map,java.util.Map,org.springframework.web.bind.support.SessionStatus,java.security.Principal)={[/oauth/authorize],methods=[POST],params=[user_oauth_approval]}}
+2017-08-30 16:22:14.443  INFO 67644 --- [           main] .s.o.p.e.FrameworkEndpointHandlerMapping : Mapped "{[/oauth/authorize]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.security.oauth2.provider.endpoint.AuthorizationEndpoint.authorize(java.util.Map<java.lang.String, java.lang.Object>,java.util.Map<java.lang.String, java.lang.String>,org.springframework.web.bind.support.SessionStatus,java.security.Principal)
+2017-08-30 16:22:14.444  INFO 67644 --- [           main] .s.o.p.e.FrameworkEndpointHandlerMapping : Mapped "{[/oauth/authorize],methods=[POST],params=[user_oauth_approval]}" onto public org.springframework.web.servlet.View org.springframework.security.oauth2.provider.endpoint.AuthorizationEndpoint.approveOrDeny(java.util.Map<java.lang.String, java.lang.String>,java.util.Map<java.lang.String, ?>,org.springframework.web.bind.support.SessionStatus,java.security.Principal)
+2017-08-30 16:22:14.445 DEBUG 67644 --- [           main] .s.o.p.e.FrameworkEndpointHandlerMapping : 2 request handler methods found on class org.springframework.security.oauth2.provider.endpoint.TokenEndpoint: {public org.springframework.http.ResponseEntity org.springframework.security.oauth2.provider.endpoint.TokenEndpoint.postAccessToken(java.security.Principal,java.util.Map) throws org.springframework.web.HttpRequestMethodNotSupportedException={[/oauth/token],methods=[POST]}, public org.springframework.http.ResponseEntity org.springframework.security.oauth2.provider.endpoint.TokenEndpoint.getAccessToken(java.security.Principal,java.util.Map) throws org.springframework.web.HttpRequestMethodNotSupportedException={[/oauth/token],methods=[GET]}}
+2017-08-30 16:22:14.445  INFO 67644 --- [           main] .s.o.p.e.FrameworkEndpointHandlerMapping : Mapped "{[/oauth/token],methods=[POST]}" onto public org.springframework.http.ResponseEntity<org.springframework.security.oauth2.common.OAuth2AccessToken> org.springframework.security.oauth2.provider.endpoint.TokenEndpoint.postAccessToken(java.security.Principal,java.util.Map<java.lang.String, java.lang.String>) throws org.springframework.web.HttpRequestMethodNotSupportedException
+2017-08-30 16:22:14.445  INFO 67644 --- [           main] .s.o.p.e.FrameworkEndpointHandlerMapping : Mapped "{[/oauth/token],methods=[GET]}" onto public org.springframework.http.ResponseEntity<org.springframework.security.oauth2.common.OAuth2AccessToken> org.springframework.security.oauth2.provider.endpoint.TokenEndpoint.getAccessToken(java.security.Principal,java.util.Map<java.lang.String, java.lang.String>) throws org.springframework.web.HttpRequestMethodNotSupportedException
+2017-08-30 16:22:14.446 DEBUG 67644 --- [           main] .s.o.p.e.FrameworkEndpointHandlerMapping : 1 request handler methods found on class org.springframework.security.oauth2.provider.endpoint.CheckTokenEndpoint: {public java.util.Map org.springframework.security.oauth2.provider.endpoint.CheckTokenEndpoint.checkToken(java.lang.String)={[/oauth/check_token]}}
+2017-08-30 16:22:14.446  INFO 67644 --- [           main] .s.o.p.e.FrameworkEndpointHandlerMapping : Mapped "{[/oauth/check_token]}" onto public java.util.Map<java.lang.String, ?> org.springframework.security.oauth2.provider.endpoint.CheckTokenEndpoint.checkToken(java.lang.String)
+2017-08-30 16:22:14.446 DEBUG 67644 --- [           main] .s.o.p.e.FrameworkEndpointHandlerMapping : 1 request handler methods found on class org.springframework.security.oauth2.provider.endpoint.WhitelabelApprovalEndpoint: {public org.springframework.web.servlet.ModelAndView org.springframework.security.oauth2.provider.endpoint.WhitelabelApprovalEndpoint.getAccessConfirmation(java.util.Map,javax.servlet.http.HttpServletRequest) throws java.lang.Exception={[/oauth/confirm_access]}}
+2017-08-30 16:22:14.447  INFO 67644 --- [           main] .s.o.p.e.FrameworkEndpointHandlerMapping : Mapped "{[/oauth/confirm_access]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.security.oauth2.provider.endpoint.WhitelabelApprovalEndpoint.getAccessConfirmation(java.util.Map<java.lang.String, java.lang.Object>,javax.servlet.http.HttpServletRequest) throws java.lang.Exception
+2017-08-30 16:22:14.447 DEBUG 67644 --- [           main] .s.o.p.e.FrameworkEndpointHandlerMapping : 1 request handler methods found on class org.springframework.security.oauth2.provider.endpoint.WhitelabelErrorEndpoint: {public org.springframework.web.servlet.ModelAndView org.springframework.security.oauth2.provider.endpoint.WhitelabelErrorEndpoint.handleError(javax.servlet.http.HttpServletRequest)={[/oauth/error]}}
+2017-08-30 16:22:14.447  INFO 67644 --- [           main] .s.o.p.e.FrameworkEndpointHandlerMapping : Mapped "{[/oauth/error]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.security.oauth2.provider.endpoint.WhitelabelErrorEndpoint.handleError(javax.servlet.http.HttpServletRequest)
+2017-08-30 16:22:14.588  INFO 67644 --- [           main] a.OAuth2AuthorizationServerConfiguration : Initialized OAuth2 Client
+
+security.oauth2.client.clientId = acme
+security.oauth2.client.secret = ****
+
+
+2017-08-30 16:22:14.691  INFO 67644 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@619713e5: startup date [Wed Aug 30 16:22:12 PDT 2017]; root of context hierarchy
+2017-08-30 16:22:14.722  INFO 67644 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user || /me]}" onto public java.util.Map<java.lang.String, java.lang.String> com.enliven.authservice.web.LoginController.getCurrentLoginUser(java.security.Principal)
+2017-08-30 16:22:14.724  INFO 67644 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-08-30 16:22:14.724  INFO 67644 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-08-30 16:22:14.897  INFO 67644 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-30 16:22:14.897  INFO 67644 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-30 16:22:14.924  INFO 67644 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-30 16:22:14.941  INFO 67644 --- [           main] oConfiguration$WelcomePageHandlerMapping : Adding welcome page: class path resource [static/index.html]
+2017-08-30 16:22:15.144  INFO 67644 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/css/**'], Ant [pattern='/js/**'], Ant [pattern='/images/**'], Ant [pattern='/webjars/**'], Ant [pattern='/**/favicon.ico'], Ant [pattern='/error']]], []
+2017-08-30 16:22:15.185 DEBUG 67644 --- [           main] edFilterInvocationSecurityMetadataSource : Adding web access control expression 'fullyAuthenticated', for Ant [pattern='/oauth/token']
+2017-08-30 16:22:15.186 DEBUG 67644 --- [           main] edFilterInvocationSecurityMetadataSource : Adding web access control expression 'denyAll()', for Ant [pattern='/oauth/token_key']
+2017-08-30 16:22:15.186 DEBUG 67644 --- [           main] edFilterInvocationSecurityMetadataSource : Adding web access control expression 'denyAll()', for Ant [pattern='/oauth/check_token']
+2017-08-30 16:22:15.194 DEBUG 67644 --- [           main] o.s.s.w.a.i.FilterSecurityInterceptor    : Validated configuration attributes
+2017-08-30 16:22:15.195 DEBUG 67644 --- [           main] o.s.s.w.a.i.FilterSecurityInterceptor    : Validated configuration attributes
+2017-08-30 16:22:15.200  INFO 67644 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/oauth/token'], Ant [pattern='/oauth/token_key'], Ant [pattern='/oauth/check_token']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3c380bd8, org.springframework.security.web.context.SecurityContextPersistenceFilter@3468ee6e, org.springframework.security.web.header.HeaderWriterFilter@25d0cb3a, org.springframework.security.web.authentication.logout.LogoutFilter@16a5eb6d, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@2525a5b8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@421def93, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2da16263, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@34b87182, org.springframework.security.web.session.SessionManagementFilter@6e3eb0cd, org.springframework.security.web.access.ExceptionTranslationFilter@3134153d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4baed682]
+2017-08-30 16:22:15.202 DEBUG 67644 --- [           main] edFilterInvocationSecurityMetadataSource : Adding web access control expression 'authenticated', for org.springframework.boot.actuate.autoconfigure.ManagementWebSecurityAutoConfiguration$LazyEndpointPathRequestMatcher@3e4e8fdf
+2017-08-30 16:22:15.203 DEBUG 67644 --- [           main] edFilterInvocationSecurityMetadataSource : Adding web access control expression 'permitAll', for org.springframework.boot.actuate.autoconfigure.ManagementWebSecurityAutoConfiguration$LazyEndpointPathRequestMatcher@6a1d6ef2
+2017-08-30 16:22:15.203 DEBUG 67644 --- [           main] o.s.s.w.a.i.FilterSecurityInterceptor    : Validated configuration attributes
+2017-08-30 16:22:15.203 DEBUG 67644 --- [           main] o.s.s.w.a.i.FilterSecurityInterceptor    : Validated configuration attributes
+2017-08-30 16:22:15.432  INFO 67644 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/heapdump || /heapdump.json],methods=[GET],produces=[application/octet-stream]}" onto public void org.springframework.boot.actuate.endpoint.mvc.HeapdumpMvcEndpoint.invoke(boolean,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException
+2017-08-30 16:22:15.433  INFO 67644 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-08-30 16:22:15.433  INFO 67644 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-08-30 16:22:15.434  INFO 67644 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/health || /health.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,java.security.Principal)
+2017-08-30 16:22:15.435  INFO 67644 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-08-30 16:22:15.435  INFO 67644 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-08-30 16:22:15.436  INFO 67644 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/info || /info.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-08-30 16:22:15.436  INFO 67644 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/auditevents || /auditevents.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public org.springframework.http.ResponseEntity<?> org.springframework.boot.actuate.endpoint.mvc.AuditEventsMvcEndpoint.findByPrincipalAndAfterAndType(java.lang.String,java.util.Date,java.lang.String)
+2017-08-30 16:22:15.441  INFO 67644 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/loggers/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.LoggersMvcEndpoint.get(java.lang.String)
+2017-08-30 16:22:15.442  INFO 67644 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/loggers/{name:.*}],methods=[POST],consumes=[application/vnd.spring-boot.actuator.v1+json || application/json],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.LoggersMvcEndpoint.set(java.lang.String,java.util.Map<java.lang.String, java.lang.String>)
+2017-08-30 16:22:15.442  INFO 67644 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/loggers || /loggers.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-08-30 16:22:15.443  INFO 67644 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-08-30 16:22:15.443  INFO 67644 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+2017-08-30 16:22:15.443  INFO 67644 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-08-30 16:22:15.444  INFO 67644 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+2017-08-30 16:22:15.445  INFO 67644 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env || /env.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-08-30 16:22:15.445  INFO 67644 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-08-30 16:22:15.446  INFO 67644 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.boot.actuate.autoconfigure.ManagementWebSecurityAutoConfiguration$LazyEndpointPathRequestMatcher@1f1cddf3, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@228bda54, org.springframework.security.web.context.SecurityContextPersistenceFilter@5d342959, org.springframework.security.web.header.HeaderWriterFilter@1cfc2538, org.springframework.web.filter.CorsFilter@75b6dd5b, org.springframework.security.web.authentication.logout.LogoutFilter@42cc183e, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@36920bd6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2ecf5915, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@53e76c11, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@b3e86d5, org.springframework.security.web.session.SessionManagementFilter@66deec87, org.springframework.security.web.access.ExceptionTranslationFilter@72503b19, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@79aee22a]
+2017-08-30 16:22:15.456 DEBUG 67644 --- [           main] edFilterInvocationSecurityMetadataSource : Adding web access control expression 'authenticated', for org.springframework.security.web.util.matcher.AnyRequestMatcher@1
+2017-08-30 16:22:15.457 DEBUG 67644 --- [           main] o.s.s.w.a.i.FilterSecurityInterceptor    : Validated configuration attributes
+2017-08-30 16:22:15.457 DEBUG 67644 --- [           main] o.s.s.w.a.i.FilterSecurityInterceptor    : Validated configuration attributes
+2017-08-30 16:22:15.457  INFO 67644 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/me'], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@66de00f2, org.springframework.security.web.context.SecurityContextPersistenceFilter@72eb6200, org.springframework.security.web.header.HeaderWriterFilter@58f4b31a, org.springframework.security.web.authentication.logout.LogoutFilter@1682c08c, org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter@44fdce3c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@76ececd, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7affc159, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6c479fdf, org.springframework.security.web.session.SessionManagementFilter@21a9a705, org.springframework.security.web.access.ExceptionTranslationFilter@67e25252, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@16aed49f]
+2017-08-30 16:22:15.461 DEBUG 67644 --- [           main] edFilterInvocationSecurityMetadataSource : Adding web access control expression 'permitAll', for Ant [pattern='/logout', POST]
+2017-08-30 16:22:15.461 DEBUG 67644 --- [           main] edFilterInvocationSecurityMetadataSource : Adding web access control expression 'permitAll', for ExactUrl [processUrl='/']
+2017-08-30 16:22:15.461 DEBUG 67644 --- [           main] edFilterInvocationSecurityMetadataSource : Adding web access control expression 'permitAll', for Ant [pattern='/']
+2017-08-30 16:22:15.461 DEBUG 67644 --- [           main] edFilterInvocationSecurityMetadataSource : Adding web access control expression 'permitAll', for Ant [pattern='/login**']
+2017-08-30 16:22:15.462 DEBUG 67644 --- [           main] edFilterInvocationSecurityMetadataSource : Adding web access control expression 'permitAll', for Ant [pattern='webjars/**']
+2017-08-30 16:22:15.462 DEBUG 67644 --- [           main] edFilterInvocationSecurityMetadataSource : Adding web access control expression 'authenticated', for org.springframework.security.web.util.matcher.AnyRequestMatcher@1
+2017-08-30 16:22:15.462 DEBUG 67644 --- [           main] o.s.s.w.a.i.FilterSecurityInterceptor    : Validated configuration attributes
+2017-08-30 16:22:15.462 DEBUG 67644 --- [           main] o.s.s.w.a.i.FilterSecurityInterceptor    : Validated configuration attributes
+2017-08-30 16:22:15.462  INFO 67644 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/**'], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7da34b26, org.springframework.security.web.context.SecurityContextPersistenceFilter@54089484, org.springframework.security.web.header.HeaderWriterFilter@36c2d629, org.springframework.security.web.csrf.CsrfFilter@6690b9fa, org.springframework.security.web.authentication.logout.LogoutFilter@479111ba, org.springframework.web.filter.CompositeFilter@10c47c79, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@45adc393, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@65fe2691, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3b2553d9, org.springframework.security.web.session.SessionManagementFilter@55fee662, org.springframework.security.web.access.ExceptionTranslationFilter@493b01ef, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3a2e9f5b]
+2017-08-30 16:22:15.463 DEBUG 67644 --- [           main] edFilterInvocationSecurityMetadataSource : Adding web access control expression 'hasAnyRole('ROLE_USER','ROLE_ACTUATOR')', for org.springframework.security.web.util.matcher.AnyRequestMatcher@1
+2017-08-30 16:22:15.464 DEBUG 67644 --- [           main] o.s.s.w.a.i.FilterSecurityInterceptor    : Validated configuration attributes
+2017-08-30 16:22:15.464 DEBUG 67644 --- [           main] o.s.s.w.a.i.FilterSecurityInterceptor    : Validated configuration attributes
+2017-08-30 16:22:15.464  INFO 67644 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/**']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6d0be7ab, org.springframework.security.web.context.SecurityContextPersistenceFilter@7c663eaf, org.springframework.security.web.header.HeaderWriterFilter@7b3cde6f, org.springframework.security.web.authentication.logout.LogoutFilter@3ba0ae41, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@76fe6cdc, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3bb5ceb, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1e692555, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1d4fb213, org.springframework.security.web.session.SessionManagementFilter@6d091cad, org.springframework.security.web.access.ExceptionTranslationFilter@2c9a6717, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3c9c6245]
+2017-08-30 16:22:15.629  INFO 67644 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-08-30 16:22:15.637  INFO 67644 --- [           main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
+2017-08-30 16:22:15.703  INFO 67644 --- [           main] o.e.j.s.h.ContextHandler.application     : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-08-30 16:22:15.703  INFO 67644 --- [           main] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-08-30 16:22:15.715  INFO 67644 --- [           main] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 12 ms
+2017-08-30 16:22:15.750  INFO 67644 --- [           main] o.e.jetty.server.AbstractConnector       : Started ServerConnector@15f2eda3{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+2017-08-30 16:22:15.751  INFO 67644 --- [           main] .s.b.c.e.j.JettyEmbeddedServletContainer : Jetty started on port(s) 8080 (http/1.1)
+2017-08-30 16:22:15.756  INFO 67644 --- [           main] com.enliven.authservice.Application      : Started Application in 3.761 seconds (JVM running for 4.066)
+2017-08-30 16:22:24.299 DEBUG 67644 --- [tp1455064947-13] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/css/**']
+2017-08-30 16:22:24.299 DEBUG 67644 --- [tp1455064947-13] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/login/facebook'; against '/css/**'
+2017-08-30 16:22:24.299 DEBUG 67644 --- [tp1455064947-13] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/js/**']
+2017-08-30 16:22:24.299 DEBUG 67644 --- [tp1455064947-13] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/login/facebook'; against '/js/**'
+2017-08-30 16:22:24.299 DEBUG 67644 --- [tp1455064947-13] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/images/**']
+2017-08-30 16:22:24.299 DEBUG 67644 --- [tp1455064947-13] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/login/facebook'; against '/images/**'
+2017-08-30 16:22:24.299 DEBUG 67644 --- [tp1455064947-13] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/webjars/**']
+2017-08-30 16:22:24.299 DEBUG 67644 --- [tp1455064947-13] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/login/facebook'; against '/webjars/**'
+2017-08-30 16:22:24.299 DEBUG 67644 --- [tp1455064947-13] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/**/favicon.ico']
+2017-08-30 16:22:24.299 DEBUG 67644 --- [tp1455064947-13] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/login/facebook'; against '/**/favicon.ico'
+2017-08-30 16:22:24.299 DEBUG 67644 --- [tp1455064947-13] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/error']
+2017-08-30 16:22:24.299 DEBUG 67644 --- [tp1455064947-13] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/login/facebook'; against '/error'
+2017-08-30 16:22:24.299 DEBUG 67644 --- [tp1455064947-13] o.s.s.web.util.matcher.OrRequestMatcher  : No matches found
+2017-08-30 16:22:24.299 DEBUG 67644 --- [tp1455064947-13] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/oauth/token']
+2017-08-30 16:22:24.299 DEBUG 67644 --- [tp1455064947-13] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/login/facebook'; against '/oauth/token'
+2017-08-30 16:22:24.299 DEBUG 67644 --- [tp1455064947-13] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/oauth/token_key']
+2017-08-30 16:22:24.299 DEBUG 67644 --- [tp1455064947-13] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/login/facebook'; against '/oauth/token_key'
+2017-08-30 16:22:24.299 DEBUG 67644 --- [tp1455064947-13] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/oauth/check_token']
+2017-08-30 16:22:24.300 DEBUG 67644 --- [tp1455064947-13] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/login/facebook'; against '/oauth/check_token'
+2017-08-30 16:22:24.300 DEBUG 67644 --- [tp1455064947-13] o.s.s.web.util.matcher.OrRequestMatcher  : No matches found
+2017-08-30 16:22:24.301 DEBUG 67644 --- [tp1455064947-13] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/heapdump']
+2017-08-30 16:22:24.301 DEBUG 67644 --- [tp1455064947-13] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/login/facebook'; against '/heapdump'
+2017-08-30 16:22:24.301 DEBUG 67644 --- [tp1455064947-13] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/heapdump/**']
+2017-08-30 16:22:24.301 DEBUG 67644 --- [tp1455064947-13] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/login/facebook'; against '/heapdump/**'
+2017-08-30 16:22:24.301 DEBUG 67644 --- [tp1455064947-13] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/heapdump.*']
+2017-08-30 16:22:24.301 DEBUG 67644 --- [tp1455064947-13] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/login/facebook'; against '/heapdump.*'
+2017-08-30 16:22:24.301 DEBUG 67644 --- [tp1455064947-13] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/heapdump/']
+2017-08-30 16:22:24.301 DEBUG 67644 --- [tp1455064947-13] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/login/facebook'; against '/heapdump/'
+2017-08-30 16:22:24.301 DEBUG 67644 --- [tp1455064947-13] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/beans']
+2017-08-30 16:22:24.301 DEBUG 67644 --- [tp1455064947-13] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/login/facebook'; against '/beans'
+2017-08-30 16:22:24.301 DEBUG 67644 --- [tp1455064947-13] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/beans/**']
+2017-08-30 16:22:24.301 DEBUG 67644 --- [tp1455064947-13] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/login/facebook'; against '/beans/**'
+2017-08-30 16:22:24.301 DEBUG 67644 --- [tp1455064947-13] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/beans.*']
+2017-08-30 16:22:24.301 DEBUG 67644 --- [tp1455064947-13] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/login/facebook'; against '/beans.*'
+2017-08-30 16:22:24.301 DEBUG 67644 --- [tp1455064947-13] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/beans/']
+2017-08-30 16:22:24.301 DEBUG 67644 --- [tp1455064947-13] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/login/facebook'; against '/beans/'
+2017-08-30 16:22:24.301 DEBUG 67644 --- [tp1455064947-13] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/trace']
+2017-08-30 16:22:24.301 DEBUG 67644 --- [tp1455064947-13] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/login/facebook'; against '/trace'
+2017-08-30 16:22:24.302 DEBUG 67644 --- [tp1455064947-13] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/trace/**']
+2017-08-30 16:22:24.302 DEBUG 67644 --- [tp1455064947-13] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/login/facebook'; against '/trace/**'
+2017-08-30 16:22:24.302 DEBUG 67644 --- [tp1455064947-13] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/trace.*']
+2017-08-30 16:22:24.302 DEBUG 67644 --- [tp1455064947-13] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/login/facebook'; against '/trace.*'
+2017-08-30 16:22:24.302 DEBUG 67644 --- [tp1455064947-13] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/trace/']
+2017-08-30 16:22:24.302 DEBUG 67644 --- [tp1455064947-13] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/login/facebook'; against '/trace/'
+2017-08-30 16:22:24.302 DEBUG 67644 --- [tp1455064947-13] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/health']
+2017-08-30 16:22:24.302 DEBUG 67644 --- [tp1455064947-13] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/login/facebook'; against '/health'
+2017-08-30 16:22:24.302 DEBUG 67644 --- [tp1455064947-13] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/health/**']
+2017-08-30 16:22:24.302 DEBUG 67644 --- [tp1455064947-13] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/login/facebook'; against '/health/**'
+2017-08-30 16:22:24.302 DEBUG 67644 --- [tp1455064947-13] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/health.*']
+2017-08-30 16:22:24.302 DEBUG 67644 --- [tp1455064947-13] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/login/facebook'; against '/health.*'
+2017-08-30 16:22:24.302 DEBUG 67644 --- [tp1455064947-13] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/health/']
+2017-08-30 16:22:24.302 DEBUG 67644 --- [tp1455064947-13] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/login/facebook'; against '/health/'
+2017-08-30 16:22:24.302 DEBUG 67644 --- [tp1455064947-13] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/mappings']
+2017-08-30 16:22:24.302 DEBUG 67644 --- [tp1455064947-13] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/login/facebook'; against '/mappings'
+2017-08-30 16:22:24.302 DEBUG 67644 --- [tp1455064947-13] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/mappings/**']
+2017-08-30 16:22:24.302 DEBUG 67644 --- [tp1455064947-13] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/login/facebook'; against '/mappings/**'
+2017-08-30 16:22:24.302 DEBUG 67644 --- [tp1455064947-13] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/mappings.*']
+2017-08-30 16:22:24.302 DEBUG 67644 --- [tp1455064947-13] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/login/facebook'; against '/mappings.*'
+2017-08-30 16:22:24.303 DEBUG 67644 --- [tp1455064947-13] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/mappings/']
+2017-08-30 16:22:24.303 DEBUG 67644 --- [tp1455064947-13] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/login/facebook'; against '/mappings/'
+2017-08-30 16:22:24.303 DEBUG 67644 --- [tp1455064947-13] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/autoconfig']
+2017-08-30 16:22:24.303 DEBUG 67644 --- [tp1455064947-13] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/login/facebook'; against '/autoconfig'
+2017-08-30 16:22:24.303 DEBUG 67644 --- [tp1455064947-13] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/autoconfig/**']
+2017-08-30 16:22:24.303 DEBUG 67644 --- [tp1455064947-13] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/login/facebook'; against '/autoconfig/**'
+2017-08-30 16:22:24.303 DEBUG 67644 --- [tp1455064947-13] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/autoconfig.*']
+2017-08-30 16:22:24.303 DEBUG 67644 --- [tp1455064947-13] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/login/facebook'; against '/autoconfig.*'
+2017-08-30 16:22:24.303 DEBUG 67644 --- [tp1455064947-13] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/autoconfig/']
+2017-08-30 16:22:24.303 DEBUG 67644 --- [tp1455064947-13] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/login/facebook'; against '/autoconfig/'
+2017-08-30 16:22:24.303 DEBUG 67644 --- [tp1455064947-13] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/info']
+2017-08-30 16:22:24.303 DEBUG 67644 --- [tp1455064947-13] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/login/facebook'; against '/info'
+2017-08-30 16:22:24.303 DEBUG 67644 --- [tp1455064947-13] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/info/**']
+2017-08-30 16:22:24.303 DEBUG 67644 --- [tp1455064947-13] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/login/facebook'; against '/info/**'
+2017-08-30 16:22:24.303 DEBUG 67644 --- [tp1455064947-13] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/info.*']
+2017-08-30 16:22:24.303 DEBUG 67644 --- [tp1455064947-13] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/login/facebook'; against '/info.*'
+2017-08-30 16:22:24.303 DEBUG 67644 --- [tp1455064947-13] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/info/']
+2017-08-30 16:22:24.303 DEBUG 67644 --- [tp1455064947-13] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/login/facebook'; against '/info/'
+2017-08-30 16:22:24.303 DEBUG 67644 --- [tp1455064947-13] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/auditevents']
+2017-08-30 16:22:24.303 DEBUG 67644 --- [tp1455064947-13] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/login/facebook'; against '/auditevents'
+2017-08-30 16:22:24.303 DEBUG 67644 --- [tp1455064947-13] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/auditevents/**']
+2017-08-30 16:22:24.303 DEBUG 67644 --- [tp1455064947-13] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/login/facebook'; against '/auditevents/**'
+2017-08-30 16:22:24.303 DEBUG 67644 --- [tp1455064947-13] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/auditevents.*']
+2017-08-30 16:22:24.303 DEBUG 67644 --- [tp1455064947-13] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/login/facebook'; against '/auditevents.*'
+2017-08-30 16:22:24.303 DEBUG 67644 --- [tp1455064947-13] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/auditevents/']
+2017-08-30 16:22:24.303 DEBUG 67644 --- [tp1455064947-13] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/login/facebook'; against '/auditevents/'
+2017-08-30 16:22:24.304 DEBUG 67644 --- [tp1455064947-13] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/loggers']
+2017-08-30 16:22:24.304 DEBUG 67644 --- [tp1455064947-13] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/login/facebook'; against '/loggers'
+2017-08-30 16:22:24.304 DEBUG 67644 --- [tp1455064947-13] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/loggers/**']
+2017-08-30 16:22:24.304 DEBUG 67644 --- [tp1455064947-13] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/login/facebook'; against '/loggers/**'
+2017-08-30 16:22:24.304 DEBUG 67644 --- [tp1455064947-13] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/loggers.*']
+2017-08-30 16:22:24.304 DEBUG 67644 --- [tp1455064947-13] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/login/facebook'; against '/loggers.*'
+2017-08-30 16:22:24.304 DEBUG 67644 --- [tp1455064947-13] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/loggers/']
+2017-08-30 16:22:24.304 DEBUG 67644 --- [tp1455064947-13] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/login/facebook'; against '/loggers/'
+2017-08-30 16:22:24.304 DEBUG 67644 --- [tp1455064947-13] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/dump']
+2017-08-30 16:22:24.304 DEBUG 67644 --- [tp1455064947-13] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/login/facebook'; against '/dump'
+2017-08-30 16:22:24.304 DEBUG 67644 --- [tp1455064947-13] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/dump/**']
+2017-08-30 16:22:24.304 DEBUG 67644 --- [tp1455064947-13] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/login/facebook'; against '/dump/**'
+2017-08-30 16:22:24.304 DEBUG 67644 --- [tp1455064947-13] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/dump.*']
+2017-08-30 16:22:24.304 DEBUG 67644 --- [tp1455064947-13] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/login/facebook'; against '/dump.*'
+2017-08-30 16:22:24.304 DEBUG 67644 --- [tp1455064947-13] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/dump/']
+2017-08-30 16:22:24.304 DEBUG 67644 --- [tp1455064947-13] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/login/facebook'; against '/dump/'
+2017-08-30 16:22:24.304 DEBUG 67644 --- [tp1455064947-13] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/metrics']
+2017-08-30 16:22:24.304 DEBUG 67644 --- [tp1455064947-13] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/login/facebook'; against '/metrics'
+2017-08-30 16:22:24.304 DEBUG 67644 --- [tp1455064947-13] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/metrics/**']
+2017-08-30 16:22:24.304 DEBUG 67644 --- [tp1455064947-13] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/login/facebook'; against '/metrics/**'
+2017-08-30 16:22:24.304 DEBUG 67644 --- [tp1455064947-13] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/metrics.*']
+2017-08-30 16:22:24.304 DEBUG 67644 --- [tp1455064947-13] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/login/facebook'; against '/metrics.*'
+2017-08-30 16:22:24.304 DEBUG 67644 --- [tp1455064947-13] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/metrics/']
+2017-08-30 16:22:24.305 DEBUG 67644 --- [tp1455064947-13] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/login/facebook'; against '/metrics/'
+2017-08-30 16:22:24.305 DEBUG 67644 --- [tp1455064947-13] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/env']
+2017-08-30 16:22:24.305 DEBUG 67644 --- [tp1455064947-13] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/login/facebook'; against '/env'
+2017-08-30 16:22:24.305 DEBUG 67644 --- [tp1455064947-13] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/env/**']
+2017-08-30 16:22:24.305 DEBUG 67644 --- [tp1455064947-13] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/login/facebook'; against '/env/**'
+2017-08-30 16:22:24.305 DEBUG 67644 --- [tp1455064947-13] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/env.*']
+2017-08-30 16:22:24.305 DEBUG 67644 --- [tp1455064947-13] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/login/facebook'; against '/env.*'
+2017-08-30 16:22:24.305 DEBUG 67644 --- [tp1455064947-13] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/env/']
+2017-08-30 16:22:24.305 DEBUG 67644 --- [tp1455064947-13] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/login/facebook'; against '/env/'
+2017-08-30 16:22:24.305 DEBUG 67644 --- [tp1455064947-13] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/configprops']
+2017-08-30 16:22:24.305 DEBUG 67644 --- [tp1455064947-13] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/login/facebook'; against '/configprops'
+2017-08-30 16:22:24.305 DEBUG 67644 --- [tp1455064947-13] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/configprops/**']
+2017-08-30 16:22:24.305 DEBUG 67644 --- [tp1455064947-13] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/login/facebook'; against '/configprops/**'
+2017-08-30 16:22:24.306 DEBUG 67644 --- [tp1455064947-13] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/configprops.*']
+2017-08-30 16:22:24.306 DEBUG 67644 --- [tp1455064947-13] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/login/facebook'; against '/configprops.*'
+2017-08-30 16:22:24.306 DEBUG 67644 --- [tp1455064947-13] o.s.s.web.util.matcher.OrRequestMatcher  : Trying to match using Ant [pattern='/configprops/']
+2017-08-30 16:22:24.306 DEBUG 67644 --- [tp1455064947-13] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/login/facebook'; against '/configprops/'
+2017-08-30 16:22:24.306 DEBUG 67644 --- [tp1455064947-13] o.s.s.web.util.matcher.OrRequestMatcher  : No matches found
+2017-08-30 16:22:24.306 DEBUG 67644 --- [tp1455064947-13] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/login/facebook'; against '/me'
+2017-08-30 16:22:24.306 DEBUG 67644 --- [tp1455064947-13] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request '/login/facebook' matched by universal pattern '/**'
+2017-08-30 16:22:24.307 DEBUG 67644 --- [tp1455064947-13] o.s.security.web.FilterChainProxy        : /login/facebook at position 1 of 12 in additional filter chain; firing Filter: 'WebAsyncManagerIntegrationFilter'
+2017-08-30 16:22:24.308 DEBUG 67644 --- [tp1455064947-13] o.s.security.web.FilterChainProxy        : /login/facebook at position 2 of 12 in additional filter chain; firing Filter: 'SecurityContextPersistenceFilter'
+2017-08-30 16:22:24.308 DEBUG 67644 --- [tp1455064947-13] w.c.HttpSessionSecurityContextRepository : No HttpSession currently exists
+2017-08-30 16:22:24.309 DEBUG 67644 --- [tp1455064947-13] w.c.HttpSessionSecurityContextRepository : No SecurityContext was available from the HttpSession: null. A new one will be created.
+2017-08-30 16:22:24.311 DEBUG 67644 --- [tp1455064947-13] o.s.security.web.FilterChainProxy        : /login/facebook at position 3 of 12 in additional filter chain; firing Filter: 'HeaderWriterFilter'
+2017-08-30 16:22:24.312 DEBUG 67644 --- [tp1455064947-13] o.s.s.w.header.writers.HstsHeaderWriter  : Not injecting HSTS header since it did not match the requestMatcher org.springframework.security.web.header.writers.HstsHeaderWriter$SecureRequestMatcher@6eb1191b
+2017-08-30 16:22:24.312 DEBUG 67644 --- [tp1455064947-13] o.s.security.web.FilterChainProxy        : /login/facebook at position 4 of 12 in additional filter chain; firing Filter: 'CsrfFilter'
+2017-08-30 16:22:24.314 DEBUG 67644 --- [tp1455064947-13] o.s.security.web.FilterChainProxy        : /login/facebook at position 5 of 12 in additional filter chain; firing Filter: 'LogoutFilter'
+2017-08-30 16:22:24.314 DEBUG 67644 --- [tp1455064947-13] o.s.s.w.u.matcher.AntPathRequestMatcher  : Request 'GET /login/facebook' doesn't match 'POST /logout
+2017-08-30 16:22:24.314 DEBUG 67644 --- [tp1455064947-13] o.s.security.web.FilterChainProxy        : /login/facebook at position 6 of 12 in additional filter chain; firing Filter: 'CompositeFilter'
+2017-08-30 16:22:24.315 DEBUG 67644 --- [tp1455064947-13] o.s.s.w.u.matcher.AntPathRequestMatcher  : Checking match of request : '/login/facebook'; against '/login/facebook'
+2017-08-30 16:22:24.315 DEBUG 67644 --- [tp1455064947-13] uth2ClientAuthenticationProcessingFilter : Request is to process authentication
+2017-08-30 16:22:24.336 DEBUG 67644 --- [tp1455064947-13] w.c.HttpSessionSecurityContextRepository : SecurityContext is empty or contents are anonymous - context will not be stored in HttpSession.
+2017-08-30 16:22:24.336 DEBUG 67644 --- [tp1455064947-13] s.s.w.c.SecurityContextPersistenceFilter : SecurityContextHolder now cleared, as request processing completed
+2017-08-30 16:22:24.337 DEBUG 67644 --- [tp1455064947-13] o.s.s.web.DefaultRedirectStrategy        : Redirecting to 'https://www.facebook.com/dialog/oauth?client_id=246083375774471&redirect_uri=http://localhost:8080/login/facebook&response_type=code&state=iuUo90'

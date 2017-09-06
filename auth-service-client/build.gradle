@@ -86,7 +86,7 @@ dependencies {
 }
 
 // Define the main class for the application
-//mainClassName = 'com.enliven.authservice.Application'
+//mainClassName = 'ClientApplication'
 
 // from boot plugin
 //bootRun {
